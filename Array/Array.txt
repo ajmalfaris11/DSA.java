@@ -1,0 +1,12 @@
+=========================
+    Array Operations
+=========================
+
+1 - Initialization: Creating an array with predefined or dynamic values.
+2 - Traversal: Accessing each element of the array.
+3 - Insertion: Adding an element at a specific position.
+4 - Deletion: Removing an element from a specific position.
+5 - Updating: Changing the value of an element at a specific position.
+6 - Searching: Finding an element in the array (e.g., linear search, binary search).
+7 - Sorting: Arranging the elements in a particular order (e.g., ascending, descending).
+
