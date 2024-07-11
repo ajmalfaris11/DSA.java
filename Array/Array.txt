@@ -34,20 +34,23 @@
 3. Insertion (at a specific position)
 
   # Time Complexity: 
-    - Worst case: O(n)
-    - Inserting at the beginning or middle of the array requires shifting subsequent elements.
-    - Best case (inserting at the end): O(1)
-    - Inserting at the end does not require shifting elements.
-  # Space Complexity: O(n)
-    - In the worst case, when inserting at the beginning or middle, additional space is required for the new array.
+     Worst case: O(n)
+        - Inserting at the beginning or middle of the array requires shifting subsequent elements.
+     Best case (inserting at the end): O(1)
+        - Inserting at the end does not require shifting elements.
+  # Space Complexity: 
+     Worst case: O(n)
+        - In the worst case, when inserting at the beginning or middle, additional space is required for the new array.
+     Best case (inserting at the end): O(1)
+        - Inserting at the end typically does not require resizing the array, so the space complexity for the insertion operation itself is constant.
 
 4. Deletion (from a specific position)
 
   # Time Complexity: 
     - Worst case: O(n)
-    - Deleting from the beginning or middle of the array requires shifting subsequent elements.
+        - Deleting from the beginning or middle of the array requires shifting subsequent elements.
     - Best case (deleting from the end): O(1)
-    - Deleting from the end does not require shifting elements.
+        - Deleting from the end does not require shifting elements.
   # Space Complexity: O(n)
     - In the worst case, when deleting from the beginning or middle, additional space is required for the new array.
 
@@ -60,16 +63,18 @@
 
 6. Searching
 
-  Linear Search:
-    # Time Complexity: O(n)
-        - In the worst case, the element may be at the end of the array or not present.
-    # Space Complexity: O(1)
-        - No additional space is used beyond the array itself.
-  Binary Search (only applicable if the array is sorted):
-    # Time Complexity: O(log n)
-        - Binary search divides the search interval in half at each step, resulting in logarithmic time complexity.
-    # Space Complexity: O(1)
-        - No additional space is used beyond the array itself.
+   Linear Search:
+     - Time Complexity: O(n)
+       - In the worst case, the element may be at the end of the array or not present.
+     - Space Complexity: O(1)
+       - No additional space is used beyond the array itself.
+
+   Binary Search (requires sorted array):
+     - Time Complexity: O(log n)
+       - Binary search divides the search interval in half at each step, resulting in logarithmic time complexity.
+     - Space Complexity: O(1)
+       - No additional space is used beyond the array itself.
+
 
 7. Sorting
 
