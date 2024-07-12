@@ -71,6 +71,6 @@ public class array1 {
             System.out.println(result2[i]);
         }
 
-        System.out.println("Time Complexity = O(n2) \nSpace Complexity = O(1) \n\n");
+        System.out.println("Time Complexity = O(n) \nSpace Complexity = O(n) \n\n");
     }
 }
