@@ -20,10 +20,12 @@ public class array2 {
         int target = 6;
 
         targetToEnd(arr, target);
+
         System.out.println("\nThe answer :-");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+
     }
 
     public static void targetToEnd(int[] arr, int target) {
@@ -36,9 +38,8 @@ public class array2 {
 
             if (arr[i] == target) {
                 // Swap the elements
-                int temp = arr[i];
                 arr[i] = arr[j];
-                arr[j] = temp;
+                arr[j] = target;
                 j--;
             }
         }
