@@ -10,6 +10,7 @@
  */
 
 public class SLinkedList {
+    
     class Node { // it'snot predefined class
 
         int data; // INT type
@@ -23,6 +24,7 @@ public class SLinkedList {
     public Node head = null;
     public Node tail = null;
 
+// Add Node to NodList 
     public void addNode(int data) {
         Node newNode = new Node(data);
 
