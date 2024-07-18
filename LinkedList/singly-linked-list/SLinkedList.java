@@ -19,5 +19,8 @@ public class SLinkedList {
             this.data = data;
         }
     }
-
+    
+    public Node head = null;
+    public Node tail = null;
+    
 }
