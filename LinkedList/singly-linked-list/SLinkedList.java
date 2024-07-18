@@ -9,8 +9,6 @@
  
  */
 
-import java.util.LinkedList;
-
 public class SLinkedList {
     class Node { // it'snot predefined class
 
@@ -51,6 +49,13 @@ public void display(){
 
 public static void main(String[] args) {
     SLinkedList list = new SLinkedList();
+
+    list.addNode(10);
+    list.addNode(20);
+    list.addNode(30);
+    list.addNode(40);
+    list.addNode(50);
+
     list.display();
 }
 
