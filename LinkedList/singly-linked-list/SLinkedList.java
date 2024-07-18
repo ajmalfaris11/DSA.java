@@ -9,6 +9,8 @@
  
  */
 
+import java.util.LinkedList;
+
 public class SLinkedList {
     class Node { // it'snot predefined class
 
@@ -33,4 +35,23 @@ public class SLinkedList {
         }
         tail = newNode ;
     }
+
+public void display(){
+    if (head == null){
+        System.out.println("list is empty");
+        return;
+    }
+
+    Node temp = head;
+    while (head != null){
+        System.out.println(temp.data);
+        temp = temp.next;
+    }
+}
+
+public static void main(String[] args) {
+    SLinkedList list = new SLinkedList();
+    list.display();
+}
+
 }
