@@ -53,8 +53,7 @@ public class SLinkedList {
         System.out.println("\n\n");
     }
 
-    // deleting Node
-
+    //* deleting Node
  public void delete(int data) {
     Node temp = head, prev = null;
     
@@ -91,6 +90,32 @@ public class SLinkedList {
     }
 }
 
+public void insertAfter(int nextTo, int data) {
+    // Create a new node with the given data
+    Node newNode = new Node(data);
+
+    // Traverse the list to find the node with the value 'nextTo'
+    Node temp = head;
+    while (temp != null && temp.data != nextTo) {
+        temp = temp.next;
+    }
+
+    // If the node with 'nextTo' was not found, do nothing
+    if (temp == null) {
+        return;
+    }
+
+    // Insert the new node after the node with 'nextTo'
+    newNode.next = temp.next;  // Link new node to the next node
+    temp.next = newNode;       // Link previous node to new node
+
+    // If the new node is the last node, update the tail
+    if (newNode.next == null) {
+        tail = newNode;
+    }
+}
+
+
 
     // main method
     public static void main(String[] args) {
@@ -107,6 +132,7 @@ public class SLinkedList {
         // call the display funciton to print nod values
 
         list.delete(20);
+        list.insertAfter(60,100);
         list.display("list");
 
     }
