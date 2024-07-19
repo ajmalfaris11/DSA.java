@@ -1,0 +1,134 @@
+Certainly! Here is the note in plain text format:
+
+---
+
+**Data Structures and Algorithms (DSA)**
+
+Data Structures are ways to store and organize data in a computer so that it can be accessed and modified efficiently. Common data structures include arrays, linked lists, stacks, queues, trees, and graphs.
+
+Algorithms are step-by-step procedures or formulas for solving problems. They utilize data structures to manipulate data and perform tasks.
+
+---
+
+**Singly Linked List**
+
+A singly linked list is a linear data structure where each element (node) contains:
+- Data: The value stored in the node.
+- Next: A reference (or pointer) to the next node in the sequence.
+
+The first node is called the head, and the last node, which points to `null`, is called the tail.
+
+Basic Operations in a Singly Linked List
+
+1. **Traversal**:
+   - Visiting each node in the list from the head to the tail.
+   - Time Complexity: O(n)
+
+2. **Insertion**:
+   - At the head: Adding a new node before the current head.
+     - Time Complexity: O(1)
+   - At the tail: Adding a new node after the current tail.
+     - Time Complexity: O(1) if the tail reference is maintained; otherwise, O(n)
+   - In the middle: Adding a new node after a given node.
+     - Time Complexity: O(n) for finding the node + O(1) for insertion
+
+3. **Deletion**:
+   - From the head: Removing the current head node.
+     - Time Complexity: O(1)
+   - From the tail: Removing the current tail node.
+     - Time Complexity: O(n)
+   - From the middle: Removing a node after a given node.
+     - Time Complexity: O(n) for finding the node + O(1) for deletion
+
+4. **Search**:
+   - Finding a node with a specific value.
+   - Time Complexity: O(n)
+
+Example Methods
+
+- **Insert at Head**:
+  ```java
+  public void insertAtHead(int data) {
+      Node newNode = new Node(data);
+      if (head == null) {
+          head = newNode;
+          tail = newNode;
+      } else {
+          newNode.next = head;
+          head = newNode;
+      }
+  }
+  ```
+
+- **Add Node at Tail**:
+  ```java
+  public void addNode(int data) {
+      Node newNode = new Node(data);
+      if (head == null) {
+          head = newNode;
+          tail = newNode;
+      } else {
+          tail.next = newNode;
+          tail = newNode;
+      }
+  }
+  ```
+
+- **Delete Node**:
+
+  ```java
+  public void delete(int data) {
+      Node temp = head;
+      Node prev = null;
+      if (temp != null && temp.data == data) {
+          head = temp.next;
+          if (head == null) {
+              tail = null;
+          }
+          return;
+      }
+      while (temp != null && temp.data != data) {
+          prev = temp;
+          temp = temp.next;
+      }
+      if (temp == null) {
+          return;
+      }
+      if (temp == tail) {
+          tail = prev;
+          if (tail != null) {
+              tail.next = null;
+          }
+      } else {
+          prev.next = temp.next;
+      }
+  }
+  ```
+
+---
+
+**Big O Notation**
+
+Big O notation describes the performance or complexity of an algorithm in terms of the number of elements (n) in the input. It provides an upper bound on the running time or memory usage in the worst-case scenario.
+
+Common Big O complexities:
+- O(1): Constant time
+- O(log n): Logarithmic time
+- O(n): Linear time
+- O(n log n): Log-linear time
+- O(n²): Quadratic time
+- O(2^n): Exponential time
+- O(n!): Factorial time
+
+Summary of Singly Linked List Operations in Big O Notation
+
+- Accessing an element: O(n)
+- Searching for an element: O(n)
+- Inserting an element at the beginning: O(1)
+- Inserting an element at the end: O(1) (if tail is maintained)
+- Deleting an element from the beginning: O(1)
+- Deleting an element from the end: O(n)
+
+Understanding these complexities helps in selecting the right data structure and algorithm based on the requirements and constraints of your application.
+
+---
